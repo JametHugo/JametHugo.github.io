@@ -1,0 +1,581 @@
+/* CSS du Body */
+body{
+    margin-top: 20px;
+    display: flex;
+}
+
+
+.bug{
+    display: none;
+}
+
+
+
+
+/* CSS pour Ecran de 780px de large minimum */
+@media (min-width:780px){
+
+
+/* CSS Section Gauche */
+.SectionGauche{
+    /* background-color: red; */
+    width: 20%;
+    padding: 10px;
+}
+
+/* CSS Photo Profil */
+.PhotoProfil{
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    background-color: darkgrey;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+#Photo1{
+    width: 100%;
+}
+
+/* CSS Info Perso */
+.InfoPerso{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px 10px;
+    margin-top: 0px;
+    background-color: darkgrey;
+    color: whitesmoke;
+    border-radius: 15px;
+    height: auto;
+    overflow: auto;
+}
+.TitreInfoPerso, .TitreContact{
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+
+/* CSS Section Contenu */
+.SectionContenu{
+    padding: 10px;
+    /* background-color: blue; */
+    width: 60%;
+}
+
+header{
+    text-align: center;
+}
+h1{
+    padding: 10px 0px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size:50px;
+    background-color: darkgrey;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+
+/* CSS Section Sous Contenu Arrière */
+.SectionSousContenuArriere{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* CSS Retournement Page Principale à Page Secondaire */
+.BlocRetournement{
+    perspective-origin: center bottom;
+    position: relative;
+}
+.BlocRetournement, .Bloc{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition-duration: 2s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.BlocRetournement .Avant{
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.BlocRetournement .Arriere{
+    z-index: 0;
+    transform: rotateY(-180deg);
+}
+.BlocRetournement.Retour .Avant{
+    z-index: 5;
+    transform: rotateY(180deg);
+}
+.BlocRetournement.Retour .Arriere{
+    z-index: 10;
+    transform: rotateY(0deg);
+}
+
+
+
+/* CSS Section Sous Contenu n°1 */
+.SectionSousContenu1{
+    display: flex;
+}
+
+/* CSS Section Objectif */
+.Objectifs{
+    margin-right: 15px;
+    width: 48%;
+    font-size: 20px;
+    padding: 5px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+.Titre.Objectif{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+/* CSS Section Compétence DEV WEB */
+.CompetenceDev{
+    width: 48%;
+    height: 235px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.Container{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+}
+.slider div{
+    display: none;
+    color:#fff;
+    height: 30px;
+    margin-bottom: 30px;        
+    text-align: center;  
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+b{
+    font-size: 33px;
+}
+
+
+/* CSS Titre compétences dev web */
+a{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+/* CSS Compétence HTML */
+.HTML{
+    background-color: orangered;
+    padding-top: 4px; 
+    padding-right: 5px;
+    padding-left: 5px; 
+    margin-bottom: 30px;
+}
+.NiveauHTML{
+    padding-top: 5px;
+}
+
+/* CSS Compétence CSS */
+.CSS{
+    background: rgb(0, 81, 255);
+    padding-top: 4px; 
+    padding-right: 5px;
+    padding-left: 5px; 
+}
+.NiveauCSS{
+    padding-top: 5px;
+}
+
+/* CSS Compétence JS */
+.JS{
+    background: rgba(255, 230, 0, 0.918);  
+    padding-top: 4px; 
+    padding-right: 5px;
+    padding-left: 5px;  
+}
+.NiveauJS{
+    padding-top: 5px;
+}
+
+/* CSS Compétence PHP */
+.PHP{
+    background: purple;
+    padding-top: 4px; 
+    padding-right: 5px;
+    padding-left: 5px; 
+}
+.NiveauPHP{
+    padding-top: 5px;
+}
+
+/* CSS Animation */
+.active{
+    display: block !important;
+    animation-name: apparition;
+    animation-duration: 3s;
+    }
+    @keyframes apparition {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+/* CSS Bouton Switch Compétence */
+.ContBtn{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.BtnNav{
+    font-size: 25px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.fa-square{
+    color: black;
+}
+.far{
+    color: black;
+}
+
+/* CSS Bouton Accès Section Sous Contenu Arrière */
+.BtnExemple{
+    margin-top: 8px;
+    padding-bottom: 3px;
+    background-color: rgb(243, 242, 242);
+    border-radius: 10px;
+    border-color: rgb(243, 242, 242);; 
+    border-width: 2px;
+    font-weight: bold;
+    color: black;
+    font-size:15px ;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* CSS Section Diplôme */
+.Diplomes{
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+.Titre.Diplome{
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* CSS Diplôme 1 et 2 */
+.InfoDiplome1{
+    display: flex;
+    text-align: left;
+    padding-bottom: 30px;
+}
+.Diplome1{
+    font-size: 20px;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.InfoBac{
+    padding-top: 10px;
+    display: none;
+}
+.Diplome2{
+    width: 50%;
+    padding-left: 15px;
+}
+.InfoBAFA{
+    padding-top: 10px;
+    display: none;
+}
+
+/* CSS Diplôme 3 et 4 */
+.InfoDiplome2{
+    display: flex;
+    text-align: left;
+}
+.Diplome3{
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 20px;
+    display: block;
+}
+.InfoBrevet{
+    padding-top: 10px;
+    display: none;
+}
+.Diplome4{
+    width: 50%;
+    padding-left: 15px;
+}
+.InfoSauvetage{
+    padding-top: 10px;
+    display: none;
+}
+
+
+/* CSS Section Expérience Pro */
+.SectionSousContenu3{
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 15px;
+}
+.Titre.ExpPro{
+    text-align: center;
+    font-size: 40px;
+}
+
+/* CSS Retournement de carte pour Expérience Pro */
+.ExperiencePro{
+    display: flex;
+}
+.ExperiencePro > div{
+    width: calc(100% / 3);
+    
+    display: flex;
+    flex-direction: column;
+}
+.Carte {
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    height: 300px;
+    }
+.Carte:hover  {
+    transform: rotateY(180deg);
+}
+.FaceAvant, .FaceArriere {
+    position: absolute;
+    backface-visibility: hidden;
+    top: 15px;
+    left: 4px;
+    right: 4px;
+    bottom: 2px;    
+}
+.FaceAvant{
+    font-size: 30px;
+    padding: 25px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FaceArriere {
+    font-size: 18.5px;
+    padding: 25px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-radius: 15px;
+    transform: rotateY(180deg);
+    overflow: auto;
+}
+.EspaceInfoExpPro{
+    margin-bottom: 10px;
+}
+
+
+/* CSS Page Secondaire */
+.Arriere{
+    margin-right: 50    px;
+    width: 98.8%;
+    height: 787px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* CSS Page Secondaire Partie Compétence */
+.PageArrierePartie1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* CSS Bouton Switch Compétence */
+.BtnCompGauche{
+    font-size: 30px;
+    margin: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.BtnCompDroite{
+    font-size: 30px;
+    margin: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* CSS Exemple Grand Ecran */
+#ImgCode, #ImgRendu{
+    margin: 5px;
+    width: 300px;
+    height: 450px;
+}
+
+/* CSS Bouton Switch Exemple */
+.BtnImgDroite{
+    font-size: 50px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+}
+.BtnImgGauche{
+    font-size: 50px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+}
+
+/* CSS Exemple Moyen Ecran */
+@media (max-width:1200px){
+#ImgCode, #ImgRendu{
+    margin: 5px;
+    width: 210px;
+    height: 400px;
+}
+
+/* CSS Bouton Switch Exemple */
+.BtnImgDroite{
+    font-size: 50px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+}
+.BtnImgGauche{
+    font-size: 50px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+}
+}
+
+/* CSS Exemple Petit Ecran */
+@media (max-width:1000px){
+#ImgCode, #ImgRendu{
+    margin: 3px;
+    width: 150px;
+    height: 300px;
+}
+
+/* CSS Bouton Switch Exemple */
+.BtnImgDroite{
+    font-size: 30px;
+    margin: 3px;
+    width: auto;
+    height: auto;
+}
+.BtnImgGauche{
+    font-size: 30px;
+    margin: 3px;
+    width: auto;
+    height: auto;
+}
+}
+
+
+/* CSS Bouton Retour à la Page Principale */
+.BtnRetourAccueil{
+    margin-top: 40px;
+    padding-bottom: 3px;
+    background-color: rgb(243, 242, 242);
+    border-radius: 10px;
+    border-color: rgb(243, 242, 242);; 
+    border-width: 2px;
+    font-weight: bold;
+    color: black;
+    font-size:15px ;
+    cursor: pointer;
+    z-index: 10;
+}
+.PageArrierePartie2{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* CSS Section Droite */
+.SectionDroite{
+    /* background-color: greenyellow; */
+    padding: 10px;
+    width: 20%;
+}
+.InfoSecondaire{
+    font-size: 20px;
+    padding: 10px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 15px;
+    height: auto;
+    overflow: auto;
+}
+.TitreCompPerso, .TitreLanguePerso, .TitreLoisirs{  
+    margin-top: 25px;
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.Langue1, .Langue2, .Langue3{
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.LvlLangue{
+    font-size: 18px;
+}
+.InfoSecondaire .b4{
+    color: white;
+}
+
+
+
+
+
+
+}
